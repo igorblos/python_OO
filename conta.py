@@ -5,6 +5,7 @@ class ContaCorrente:
         self.__titular = titular
         self.__saldo = saldo
         self.__limite = limte
+        self.__codigo_banco = '0001'
 
     def exibir_extrato(self):
         print("Extrado do titulaar {0}:{1}".format(self.__titular, self.__saldo))
@@ -43,3 +44,11 @@ class ContaCorrente:
     @limite.setter
     def limite(self, limite):
         self.__limite = limite
+
+    @staticmethod
+    def codigo_banco():
+        return "0001"
+
+    @staticmethod
+    def codigos_bancos():
+        return {"BB": "001", "Caixa": "104", "Bradesco": "237"}
